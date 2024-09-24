@@ -1,0 +1,168 @@
+@media only screen and (max-width: 660px) {
+
+}
+
+/* ################################################## GRID LAYOUT ###################################################################################### */
+
+.container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+  }
+  
+  .sup-testimony {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "testimony-1 testimony-2";
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  
+  .testimony-1 {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "sup-testimony-1"
+      "inf-testimony-1";
+    grid-area: testimony-1;
+  }
+  
+  .sup-testimony-1 { grid-area: sup-testimony-1; }
+  
+  .inf-testimony-1 {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "photo-testimony-1 name-testimony-1";
+    grid-area: inf-testimony-1;
+  }
+  
+  .photo-testimony-1 { grid-area: photo-testimony-1; }
+  
+  .name-testimony-1 { grid-area: name-testimony-1; }
+  
+  .testimony-2 {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "sup-testimony-2"
+      "inf-testimony-2";
+    grid-area: testimony-2;
+  }
+  
+  .sup-testimony-2 { grid-area: sup-testimony-2; }
+  
+  .inf-testimony-2 {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "photo-testimony-2 name-testimony-2";
+    grid-area: inf-testimony-2;
+  }
+  
+  .photo-testimony-2 { grid-area: photo-testimony-2; }
+  
+  .name-testimony-2 { grid-area: name-testimony-2; }
+  
+  .mid-testimony { grid-area: 2 / 1 / 3 / 2; }
+  
+  .inf-testimony { grid-area: 3 / 1 / 4 / 2; }
+  
+  .testimony-3 {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "photo-testimony-3 text-testimony-3";
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  
+  .photo-testimony-3 { grid-area: photo-testimony-3; }
+  
+  .text-testimony-3 { grid-area: text-testimony-3; }
+  
+  .testimony-4 {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "text-testimony-4"
+      "photo-testimony-4";
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  
+  .text-testimony-4 { grid-area: text-testimony-4; }
+  
+  .photo-testimony-4 { grid-area: photo-testimony-4; }
+
+  /* ################################################## GRID LAYOUT (END) ###################################################################################### */
+
+  /* ################################################## STYLES ################################################################################################# */
+  
+  .sup-testimony-1, .text-testimony-3 {
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    padding: 0 1rem 0 1rem;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+
+  .testimony-3 h3 {
+    color: gray;
+  }
+
+  .testimony-2, .testimony-4 {
+    border-radius: 2rem;
+    border-style: solid;
+    padding: 0 1rem 0 1rem;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+    
+.triangle {
+  margin: 0 0 0 5rem;
+  z-index: -1;
+  transform: translate(0.1rem, -13rem);
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid black;
+}
+
+.photo-testimony-1, .photo-testimony-2, .photo-testimony-3, .photo-testimony-4 {
+  background-size: cover;
+  border-radius: 50%;
+  padding: 0 2rem 0 2rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.photo-testimony-1 {
+  background-image: url(img/testimony-1.jpg);
+}
+
+.photo-testimony-2 {
+  background-image: url(img/testimony-2.jpg);
+}
+
+.photo-testimony-3 {
+  background-image: url(img/testimony-3.jpg);
+  border-radius: 1rem;
+}
+
+.photo-testimony-4 {
+  background-image: url(img/testimony-4.jpg);
+  border-radius: 0;
+}
